@@ -1,5 +1,3 @@
-export function speak
-
-function speak() {
+export function speak() {
 	console.log("hello world") 
 }
