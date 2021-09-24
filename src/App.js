@@ -1,18 +1,36 @@
-
+import React, { Component } from 'react'
+import logo from './logo.svg';
 import './App.css';
-import {speak} from './speech';
-import wao from 'web_accessible_output';
+import {speak, SpeakComponent} from './speech';
 
-function App() {
-	speak()
-  return (
-    <div className="App">
-	<p>Hello world</p>
-	<button onClick={speak}>Click to Speak</button> //should speak 
-	wao.speak('Hello world');
+class App extends Component {
+  constructor(){
+    super()
+    this.state = {}
+  }
 
-    </div>
-  );
+render(){
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+    <p>Hello world</p>
+    <SpeakComponent />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;
